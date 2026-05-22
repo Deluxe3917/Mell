@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mellstroy Memes — Да будет свет и боромалда!</title>
+    <style>
+        :root {
+            --bg-color: #0d0d13;
+            --card-bg: #1a1a24;
+            --accent-color: #ffb703;
+            --text-color: #ffffff;
+            --text-muted: #aaaaaa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Шапка сайта */
+        header {
+            background: linear-gradient(135deg, #1e1e2f 0%, #0d0d13 100%);
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            text-shadow: 0 0 20px rgba(255, 183, 3, 0.5);
+        }
+
+        header h1 span {
+            color: var(--accent-color);
+        }
+
+        .main-quote {
+            font-size: 1.8rem;
+            font-style: italic;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(255, 183, 3, 0.3);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn-join {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #000;
+            padding: 12px 30px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-join:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 183, 3, 0.4);
+        }
+
+        /* Секция мемов */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .meme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .meme-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #2a2a3a;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .meme-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .meme-img-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, #252538, #1a1a24);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #2a2a3a;
+        }
+
+        .meme-info {
+            padding: 25px;
+        }
+
+        .meme-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .meme-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Цитаты */
+        .quotes-section {
+            background-color: #14141f;
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 1px solid #2a2a3a;
+            border-bottom: 1px solid #2a2a3a;
+        }
+
+        .quote-slider {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-card {
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+        }
+
+        .quote-author {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        /* Подвал */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background-color: #09090d;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.3rem; }
+            .main-quote { font-size: 1.3rem; }
+            .section-title { font-size: 2rem; }
+            .quote-card { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <h1>MELLSTROY <span>MEMES</span></h1>
+        <div class="main-quote">«Типо да-да, нет-нет, да будет свет и боромалда!»</div>
+        <p>Архив главных культурных феноменов, легендарных звуков и трендов от Андрея Бурима.</p>
+        <a href="#memes" class="btn-join">Смотреть мемы</a>
+    </header>
+
+    <!-- Цитаты -->
+    <section class="quotes-section">
+        <div class="quote-slider">
+            <div class="quote-card">«Да мне всё равно абсолютно, у меня своя волна, я на своей волне...»</div>
+            <div class="quote-author">— Меллстрой</div>
+        </div>
+    </section>
+
+    <!-- Основной контент с мемами -->
+    <main class="container" id="memes">
+        <h2 class="section-title">Легендарные тренды</h2>
+        
+        <div class="meme-grid">
+            
+            <!-- Мем 1 -->
+            <div class="meme-card">
+                <div class="meme-img-placeholder">🕺<br><br>Танец Меллстроя<br>(зеленый фон)</div>
+                <div class="meme-info">
+                    <h3>Шагающий танец</h3>
+                    <p>Тот самый легендарный хромакей, где Андрей ритмично шагает под музыку. Стал главным шаблоном для сотен тысяч комедийных роликов в TikTok и Shorts.</p>
+                </div>
+            </div>
+
+            <!-- Мем 2 -->
+            <div class="meme-card">
+                <div class="meme-img-placeholder">🐗<br><br>«Привет, боров!»</div>
+                <div class="meme-info">
+                    <h3>Привет, боров</h3>
+                    <p>Фирменное и максимально дружеское приветствие стримера, которое мгновенно ушло в народ и стало популярным обращением среди молодежи.</p>
+                </div>
+            </div>
+
+            <!-- Мем 3 -->
+            <div class="meme-card">
+                <div class="meme-img-placeholder">🪒<br><br>Стрижка налысо за вознаграждение</div>
+                <div class="meme-info">
+                    <h3>Большое бритьё</h3>
+                    <p>Громкий интернет-челлендж, в ходе которого известнейшие блогеры и стримеры соглашались кардинально сменить прическу в прямом эфире.</p>
+                </div>
+            </div>
+
+            <!-- Мем 4 -->
+            <div class="meme-card">
+                <div class="meme-img-placeholder">⚡<br><br>«На своей волне»</div>
+                <div class="meme-info">
+                    <h3>Философия стримера</h3>
+                    <p>Мемные размышления о том, что не нужно обращать внимание на чужое мнение, а важно всегда двигаться по жизни на своей собственной волне.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2026 Mellstroy Memes Collection. Создано исключительно в развлекательных целях.</p>
+    </footer>
+
+</body>
+</html>
